@@ -1,0 +1,286 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabelos</title>
+    <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Patung:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- <meta name="description" content="aqui vai uma descrição">
+    <meta name="keyboards" content="chave1,chave2,chave3">
+    <meta name="author" content="grupo x, fulano">
+    <meta name="robots" content="index, contato, follow">
+    <link rel="canonical" href="http://www.seusite.com.br/pagina-doproduto.html"> -->
+
+
+  <!-- SEO GOOGLE
+    <meta property="og:title" content="Titulo do seu site">
+    <meta property="og:description" content="Descrição do seu site">
+    <meta property="og:image" content="http://www.seusite.com.br/caminhodaimagem/imagem.png">
+    <meta property="og:url" content="http://www.seusite.com.br">
+    <meta property="og:type" content="website"> -->
+
+
+  <!-- SEO  TWITTER-->
+  <!-- <meta property="twitter:card" content="http://www.seusite.com.br/caminhodaimagem/imagem.png">
+    <meta property="twitter:title" content="Titulo do seu site">
+    <meta property="twitter:description" content="Descrição do seu site">
+    <meta property="twitter:image" content="http://www.seusite.com.br/caminhodaimagem/imagem.png"> -->
+
+
+  <!-- FAVICON
+     TAMANHO: 32px x 32px ou 16px x 16px
+     FORMATO: .ico .png .svg
+     -->
+  <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">    -->
+  <!-- <link rel="icon" href="" type="image/x-icon"> -->
+  <!-- <link rel="icon" href="assets/imagem/apple-icon-57x57.png" type="image/x-icon"> -->
+</head>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="top-nav">
+                    <div class="account-links">
+                        <a href="#" class="login-btn"><i class="fas fa-user"></i> Minha Conta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                         <a href="index.html"><img src="./img/Logo-Tuttibella-1.png" alt="logo" width="100" height="100"></a>
+                    </div>
+                    
+                    <nav class="main-nav desktop-nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="cabelo.html">Cabelo</a></li>
+                            <li><a href="#facial">Facial</a></li>
+                            <li><a href="#corpo">Corpo</a></li>
+                            <li><a href="#higiene">Higiene Corporal</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="header-actions">
+                        <div class="search-container">
+                            <input type="text" id="searchInput" placeholder="Buscar produtos...">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <button class="cart-btn" onclick="toggleCart()">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>🛒
+                        </button>
+                        <button class="mobile-menu-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="cabelo.html">Cabelo</a></li>
+                <li><a href="#facial">Facial</a></li>
+                <li><a href="#corpo">Corpo</a></li>
+                <li><a href="#higiene">Higiene Corporal</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+   
+
+    <!-- Products Section -->
+    <section class="products-section" id="produtos">
+        <div class="container">
+            <div class="section-header">
+                <h2 style='font-family: Patung;'>Capilar</h2>
+                <div class="filters">
+                    <select id="categoryFilter">
+                        <option value="">Todas as Categorias</option>
+                        <option value="cabelo">Cabelo</option>
+                        <option value="facial">Facial</option>
+                        <option value="corpo">Corpo</option>
+                        <option value="higiene">Higiene</option>
+                    </select>
+                    <button id="sortBtn" onclick="sortProducts()">
+                        <i class="fas fa-sort-alpha-down"></i> A-Z
+                    </button>
+                </div>
+            </div>
+               <section class="banner-divisao">
+      <div class="banner-divisao-img">
+        <img src="./img/mulheres de varias raças 01.jpg" alt="Banner 2" />
+      </div>
+    </section>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tuttibela</h3>
+                    <p>Sua loja de cosméticos de confiança, oferecendo produtos de qualidade para todos os tipos de cuidados pessoais.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="cabelo.html">Cabelo</a></li>
+                        <li><a href="#facial">Facial</a></li>
+                        <li><a href="#corpo">Corpo</a></li>
+                        <li><a href="#higiene">Higiene</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> (11) 11948457700 </p><p>👧Veruska D. R. de Oliveira</p>
+                        <p><i class="fas fa-envelope"></i> veruzkadesigner@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tuttibela. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Carrinho</h3>
+            <button class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: R$ <span id="cartTotal">0,00</span></strong>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('loginModal')">&times;</span>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" onclick="showTab('login')">Login</button>
+                    <button class="tab-btn" onclick="showTab('register')">Cadastro</button>
+                </div>
+                
+                <div class="tab-content" id="loginTab">
+                    <h3>Faça seu Login</h3>
+                    <form id="loginForm">
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="password" placeholder="Senha" required>
+                        <button type="submit">Entrar</button>
+                    </form>
+                    <a href="#" class="forgot-password">Esqueci minha senha</a>
+                </div>
+                
+                <div class="tab-content" id="registerTab" style="display: none;">
+                    <h3>Criar Conta</h3>
+                    <form id="registerForm">
+                        <input type="text" placeholder="Nome completo" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="password" placeholder="Senha" required>
+                        <input type="password" placeholder="Confirmar senha" required>
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Profile Modal -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('profileModal')">&times;</span>
+            <div class="profile-container">
+                <h3>Meu Perfil</h3>
+                <div class="profile-tabs">
+                    <button class="tab-btn active" onclick="showProfileTab('info')">Dados Pessoais</button>
+                    <button class="tab-btn" onclick="showProfileTab('orders')">Meus Pedidos</button>
+                </div>
+                
+                <div class="tab-content" id="profileInfoTab">
+                    <form id="profileForm">
+                        <input type="text" id="userName" placeholder="Nome completo" required>
+                        <input type="email" id="userEmail" placeholder="E-mail" required>
+                        <input type="tel" id="userPhone" placeholder="Telefone">
+                        <textarea id="userAddress" placeholder="Endereço"></textarea>
+                        <button type="submit">Salvar Alterações</button>
+                    </form>
+                    <button class="logout-btn" onclick="logout()">Sair</button>
+                </div>
+                
+                <div class="tab-content" id="profileOrdersTab" style="display: none;">
+                    <div class="orders-list" id="ordersList">
+                        <!-- Orders will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-btn">
+        <a href="https://wa.me/5511948457700" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
